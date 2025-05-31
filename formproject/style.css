@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit',sans-serif;
+}
+.formcard{
+    padding: 15px;
+    background-color:#84bdf4;
+    border-radius: 6px;
+    width: 360px;
+}
+label{
+    color: #222;
+    font-weight: 600;
+}
+option{
+    background-color: #222;
+    font-weight: 600;
+    color: #84bdf4;
+}
+h2{
+    color: #222;
+     font-weight: 600;
+     margin-bottom: 10px;
+     font-size:26px;
+}
+input .radio{
+    color: #222;
+}
+hr{
+    height: 0px;
+    border-bottom: 2px solid #222;
+    color: #222;
+}
+.errormsg{
+    color: tomato;
+    font-weight: 550;
+    font-size: 13px;
+}
