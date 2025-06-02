@@ -41,7 +41,7 @@ function submitdata(formdata){
     })
 }
 
-nameelement.addEventListener('change',function(e){
+nameelement.addEventListener('blur',function(e){
     if(nameelement.value === ""){
         nameerror.textContent = "Required*";
         nameerror.classList.add('errormsg');
@@ -51,7 +51,7 @@ nameelement.addEventListener('change',function(e){
     formdata.name = e.target.value;
 });
 
-emailelemnt.addEventListener('change',function(e){
+emailelemnt.addEventListener('blur',function(e){
     if(emailelemnt.value === ""){
         emailerror.textContent = "Required*";
         emailerror.classList.add('errormsg');
@@ -70,7 +70,13 @@ GendFemale.addEventListener('change',function(e){
     formdata.gender = e.target.value;
 });
 
-
+function cardpop(){
+    let pop = document.getElementById('popupcard');
+    pop.classList.add('show');
+    setTimeout(()=>{
+    pop.classList.remove('show');
+    },3000);
+}
 function validate(formdata){
     let {name , email} = formdata;
     if(name.value === ""){
@@ -93,5 +99,6 @@ formelement.addEventListener('submit',function(event){
     event.preventDefault();
     validate(formdata);
     submitdata(formdata);
-    
+    console.log(formdata);
+    cardpop();
 });
